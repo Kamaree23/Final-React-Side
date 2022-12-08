@@ -7,7 +7,14 @@
 
 
 }
-
+.about{
+  max-width: 30%;
+  text-align: center;
+}
+.hope{
+margin-left:45rem;
+max-width: 25%;
+}
 .styler{
   max-width: 100%;
  

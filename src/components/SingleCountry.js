@@ -28,12 +28,15 @@ export default function SingleCountry() {
   
    {Country.map((item)=> (
     <div key={item.population}>
+      <div className='card hope'>
         <img src={item.flags.png} alt={item.name.common}/> 
         <h3>{item.name.common}</h3>   
         <h4>Population: {item.population}</h4>    
         <h4>Region: {item.region}</h4>    
         <h4>Capital: {item.capital}</h4>
+        <h4>timezone: {item.timezones}</h4>
         {/* <span> {Object.values(data[0].languages).toString().split(",").join(", ")}</span> */}
+        </div>
     </div>
     
     
