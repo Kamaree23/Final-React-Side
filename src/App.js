@@ -3,10 +3,11 @@ import Display from './components/Display';
 
 
 
-
 export default function App() {
-  // const [user, setUser] = useSate({});
 
+  // const [user, setUser] = useState({
+  //   username:'', password: '', token:''}
+  // )
   const [Country, setCountry] = useState([])
 
   const regions = [{
@@ -60,7 +61,7 @@ export default function App() {
     <section>
 
       <div class='mainformy '>
-        <form autoComplete='off' onSubmit={findThatCountry}>
+        <form autoComplete='on' onSubmit={findThatCountry}>
           <input className='formy' 
             type='text' 
             name='search' 
@@ -70,7 +71,6 @@ export default function App() {
             onChange={(e) => setSearch(e.target.value)}
             required />
         </form>
-
 
         <form className='dropdownn' onSubmit={regionFinder}>
 

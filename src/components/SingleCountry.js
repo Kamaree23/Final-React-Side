@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 
 
 export default function SingleCountry() {
-    const [country, setCountry] = useState([]);
+    const [Country, setCountry] = useState([]);
     const { name } = useParams();
 
-
+  
     useEffect(() => {
         const getapi = async () => {
            try{
@@ -26,15 +26,14 @@ export default function SingleCountry() {
   return (
    <>
   
-   {country.map((item)=> (
+   {Country.map((item)=> (
     <div key={item.population}>
         <img src={item.flags.png} alt={item.name.common}/> 
         <h3>{item.name.common}</h3>   
         <h4>Population: {item.population}</h4>    
         <h4>Region: {item.region}</h4>    
         <h4>Capital: {item.capital}</h4>
-        {/* <h4>Language: {[0].languages}</h4>     */}
-
+        {/* <span> {Object.values(data[0].languages).toString().split(",").join(", ")}</span> */}
     </div>
     
     
