@@ -8,7 +8,8 @@ import Nav from './Nav';
 import Signup from './auth/Signup';
 import Login from './auth/Login';
 import SingleCountry from './components/SingleCountry';
-import About from './about';
+import About from './About';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default class SignUp extends Component {
 
@@ -38,8 +39,17 @@ export default class SignUp extends Component {
             
         }
         console.log(data)
+
+        const navigate = useNavigate()
+
+        function redirect  ()  {
+            
+          navigate("/login")
+        }
     }
 
+
+    
     render() {
         return (
             <div>
@@ -51,7 +61,7 @@ export default class SignUp extends Component {
                     <input placeholder='Email' name='email' className='form-control' type='email' />
                     <input placeholder='Password' name='password' className='form-control' type='password' />
                     <input placeholder='Confirm Password' name='password2' className='form-control' type='password' />
-                    <button type='submit' className='btn btn-primary'>Submit</button>
+                    <button type='submit' onClick={redirect} className='btn btn-primary' >Submit</button>
                 </form>
             </div>
         )
